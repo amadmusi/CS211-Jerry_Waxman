@@ -1,0 +1,71 @@
+/ Ahmed Musawar
+/******
+ Assignment 1: Perfect Square Problem
+ Find the Value
+ Write a program to find and print the first perfect square (i*i) whose last two digits are both odd.
+ There is no such thing as a perfect square whose last two digits are both odd. To prove this, I have
+ written an explanation in the output PDF.
+*******/
+
+
+#include <iostream>
+using namespace std;
+int
+main () 
+//main function
+{
+ int i = 1; 
+//initialize and using while loop to check first condition, to start from 1
+ while (true)
+ 
+{
+ 
+int square = i * i; 
+// squaring the value
+ 
+if (
+(square > 9) && (square % 2 == 1) && (
+(square / 10) % 2 == 1)
+) 
+// checking for last 2 digits whether odd or even
+ 
+{
+ 
+cout << i *
+ 
+i << " is a perfect square whose last two digits are odd." <<
+ 
+endl;
+ 
+break; 
+// if odd it will print the number and stop the program
+ 
+}
+ 
+else 
+// else it will keep running until the condition is met or the given values are checked
+ 
+{
+ 
+i++;
+ 
+}
+ 
+if (i == 50)
+ 
+{
+ 
+cout << 
+// it will run this if no solution, which is right in our case.
+ 
+"There is no such thing as a perfect square whose last two digits are odd."
+ 
+<< endl;
+ 
+break;
+ 
+}
+ 
+}
+ return 0;
+}
